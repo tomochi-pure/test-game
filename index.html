@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クッキークリッカー</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background: #f0f8ff;
+            margin: 0;
+            padding: 50px;
+        }
+        .container { 
+            max-width: 400px; 
+            margin: 0 auto; 
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #8B4513; margin-bottom: 30px; }
+        input { 
+            padding: 10px; 
+            margin: 10px; 
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button { 
+            padding: 15px 30px; 
+            background: #ff6b6b; 
+            color: white; 
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover { background: #ff5252; }
+        .cookie { font-size: 60px; margin: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cookie">🍪</div>
+        <h1>クッキークリッカー</h1>
+        <p>クッキーをクリックしてたくさん集めよう！</p>
+        
+        <input type="text" id="playerName" placeholder="プレイヤー名を入力" maxlength="20">
+        <br>
+        <button onclick="startGame()">ゲーム開始</button>
+        
+        <p style="color: #666; font-size: 14px; margin-top: 30px;">
+            クッキーにはHPがあります。戦略的にクリックしましょう！
+        </p>
+    </div>
+
+    <script>
+        function startGame() {
+            const name = document.getElementById('playerName').value.trim();
+            if (name === '') {
+                alert('プレイヤー名を入力してください！');
+                return;
+            }
+            // 後でゲーム画面に遷移する処理を追加
+            alert(`ようこそ ${name} さん！\n（ゲーム画面は次回実装します）`);
+        }
+    </script>
+</body>
+</html>
